@@ -137,41 +137,14 @@ const ProfileSchema = new Schema({
         type: String,
         required: true
     },
-    partnerCountry: {
-        type: String,
-        required: true
-    },
     // Partner Family Details will be discussed later
-    partnerFatherOccupation: {
-        type: String,
-        required: true
-    },
-    partnerMotherName: {
-        type: String,
-        required: true
-    },
-    partnerMotherOccupation: {
-        type: String,
-        required: true
-    },
-    partnerBrothers: {
-        type: String,
-        required: true
-    },
-    partnerSisters: {
+    
+    partnerSiblings: {
         type: String,
         required: true
     },
     // Other Details
     additional: {
-        type: String,
-        required: true
-    },
-    hobbies: {
-        type: String,
-        required: true
-    },
-    interests: {
         type: String,
         required: true
     },
