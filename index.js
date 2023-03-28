@@ -25,6 +25,7 @@ app.use(bodyParser.json());
 
 // Define Routes
 app.use("/api/users", require("./routes/user"));
+app.use("/api/profile", require("./routes/profile"));
 
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
