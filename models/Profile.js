@@ -3,11 +3,7 @@ const Schema = mongoose.Schema;
 
 // Create Schema
 const ProfileSchema = new Schema({
-    firstName: {
-        type: String,
-        required: true
-    },
-    lastName: {
+    fullName: {
         type: String,
         required: true
     },
@@ -15,7 +11,7 @@ const ProfileSchema = new Schema({
         type: String,
         required: true 
     },
-    occupation: {
+    profession: {
         type: String,
         required: true 
     },
@@ -72,14 +68,6 @@ const ProfileSchema = new Schema({
         type: String,
         required: true
     },
-    motherName: {
-        type: String,
-        required: true
-    },
-    motherOccupation: {
-        type: String,
-        required: true
-    },
     brothers: {
         type: String, 
         required: true
@@ -93,11 +81,7 @@ const ProfileSchema = new Schema({
         type: String,
         required: true
     },
-    partnerOccupation: {
-        type: String,
-        required: true
-    },
-    partnerIncome: {
+    jobStatus: {
         type: String,
         required: true
     },
@@ -105,7 +89,7 @@ const ProfileSchema = new Schema({
         type: String,
         required: true
     },
-    partnerWeight: {
+    bodyPhysique: {
         type: String,
         required: true
     },
@@ -137,9 +121,7 @@ const ProfileSchema = new Schema({
         type: String,
         required: true
     },
-    // Partner Family Details will be discussed later
-    
-    partnerSiblings: {
+    partnerCountry: {
         type: String,
         required: true
     },
