@@ -7,6 +7,10 @@ const ProfileSchema = new Schema({
         type: String,
         required: true
     },
+    phoneNumber: {
+        type: String,
+        required: true
+    },
     education: {
         type: String,
         required: true 
@@ -19,7 +23,7 @@ const ProfileSchema = new Schema({
         type: String,
         required: true
     },
-    height: {
+    selectedHeight: {
         type: String,
         required: true
     },
@@ -55,7 +59,7 @@ const ProfileSchema = new Schema({
         type: String,
         required: true
     },
-    country: {
+    stayingCountry: {
         type: String,
         required: true
     },
@@ -68,11 +72,11 @@ const ProfileSchema = new Schema({
         type: String,
         required: true
     },
-    brothers: {
+    siblings: {
         type: String, 
         required: true
     },
-    sisters: {
+    houseDetails: {
         type: String,
         required: true
     },
@@ -81,15 +85,15 @@ const ProfileSchema = new Schema({
         type: String,
         required: true
     },
-    jobStatus: {
+    partnerJobStatus: {
         type: String,
         required: true
     },
-    partnerHeight: {
+    partnerSelectedHeight: {
         type: String,
         required: true
     },
-    bodyPhysique: {
+    partnerBodyPhysique: {
         type: String,
         required: true
     },
@@ -121,12 +125,12 @@ const ProfileSchema = new Schema({
         type: String,
         required: true
     },
-    partnerCountry: {
+    partnerStayingCountry: {
         type: String,
         required: true
     },
     // Other Details
-    additional: {
+    partnerAnyDemand: {
         type: String,
         required: true
     },
