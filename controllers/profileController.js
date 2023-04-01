@@ -30,6 +30,24 @@ exports.getAllProfiles = async (req, res) => {
     }
 }
 
+// Get Profile by User ID
+exports.getProfileByUserId = async (req, res) => {
+    try {
+        const profile = await Profile.findOne({ user: req.params.id });
+        res.status(200).json({
+            status: 'success',
+            data: {
+                profile
+            }
+        });
+    }
+    catch (err) {
+        res.status(400).json({ msg: err.message });
+    }
+}
+
+
+
 exports.getProfile = async (req, res) => {
     try {
         const profile = await Profile.findById(req.params.id);
