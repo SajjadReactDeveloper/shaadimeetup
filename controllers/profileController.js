@@ -33,7 +33,7 @@ exports.getAllProfiles = async (req, res) => {
 // Get Profile by User ID
 exports.getProfileByUserId = async (req, res) => {
     try {
-        const profile = await Profile.findOne({ user: req.params.id });
+        const profile = await Profile.find({ user: req.params.id });
         res.status(200).json({
             status: 'success',
             data: {
@@ -46,8 +46,7 @@ exports.getProfileByUserId = async (req, res) => {
     }
 }
 
-
-
+// Get Profile by ID
 exports.getProfile = async (req, res) => {
     try {
         const profile = await Profile.findById(req.params.id);
@@ -63,3 +62,32 @@ exports.getProfile = async (req, res) => {
     }
 }
 
+// Edit Profile
+exports.editProfile = async (req, res) => {
+    try {
+        const profile = await Profile.findByIdAndUpdate(req.params.id, req.body);
+        res.status(200).json({
+            status: 'success',
+            data: {
+                profile
+            }
+        });
+    } catch (error) {
+        
+    }
+}
+
+// Delete Profile
+exports.deleteProfile = async (req, res) => {
+    try {
+        const profile = await Profile.findByIdAndDelete(req.params.id);
+        res.status(200).json({
+            status: 'success',
+            data: {
+                profile
+            }
+        });
+    } catch (error) {
+        
+    }
+}
